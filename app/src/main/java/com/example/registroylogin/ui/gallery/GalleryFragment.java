@@ -61,6 +61,7 @@ public class GalleryFragment extends Fragment {
 
                 if(nombre.isEmpty() || apellidoPaterno.isEmpty() || apellidoMaterno.isEmpty() || correo.isEmpty() || contrasenia.isEmpty() || contrasenia2.isEmpty() || fechaNacimiento.isEmpty()){
                     Toast.makeText(getContext(), "Faltan datos para poder registrarte", Toast.LENGTH_SHORT).show();
+                    return;
                 }
 
                 logging.setLevel(HttpLoggingInterceptor.Level.BODY);
@@ -86,10 +87,10 @@ public class GalleryFragment extends Fragment {
                             EtValidate.getText().clear();
                             Fecha.getText().clear();
                             usuario user = response.body();
-                            if (user.getEstatus().equals("Error")){
-                                Toast.makeText(getContext(), user.getMensaje().toString(), Toast.LENGTH_SHORT).show();
-                            }else{
+                            if (user.getEstatus().toString().equals("Error")){
                                 Toast.makeText(getContext(), "Registrado", Toast.LENGTH_SHORT).show();
+                            }else{
+                                Toast.makeText(getContext(), "Error", Toast.LENGTH_SHORT).show();
                             }
                         }else{
                             Toast.makeText(getContext(), "Verifica tus datos", Toast.LENGTH_SHORT).show();

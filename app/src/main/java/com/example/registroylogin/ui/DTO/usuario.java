@@ -138,9 +138,6 @@ public class usuario {
         this.mensaje = mensaje;
     }
 
-    public usuario() {
-    }
-
     public usuario(int ID, String nombre, String apellidoPaterno, String apellidoMaterno, String correo, String contrasenia, String contrasenia2, String fechaNacimiento, String status, String codigoConfirmacion, String tokenRecovery, String create_at, String update_at, String estatus, String mensaje) {
         this.ID = ID;
         this.nombre = nombre;
@@ -158,5 +155,4 @@ public class usuario {
         this.estatus = estatus;
         this.mensaje = mensaje;
     }
-
 }
