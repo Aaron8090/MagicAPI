@@ -1,5 +1,6 @@
 package com.example.registroylogin.ui.home;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +14,8 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.example.registroylogin.MainActivity;
+import com.example.registroylogin.busquedaPokemones;
 import com.example.registroylogin.databinding.FragmentHomeBinding;
 import com.example.registroylogin.ui.DTO.usuario;
 

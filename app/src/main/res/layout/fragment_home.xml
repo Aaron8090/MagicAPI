@@ -65,7 +65,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:autofillHints="no"
-                android:hint="Contrasena"
+                android:hint="Contraseña"
                 android:inputType="textPassword"
                 tools:ignore="SpeakableTextPresentCheck" />
 
@@ -78,7 +78,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:backgroundTint="#E100BCD4"
-            android:onClick="Anterior"
             android:text="Iniciar Sesion"
             android:textAlignment="center"
             android:textColor="#131313"

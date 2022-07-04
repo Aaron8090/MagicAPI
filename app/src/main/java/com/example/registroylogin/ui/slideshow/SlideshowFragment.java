@@ -36,16 +36,19 @@ public class SlideshowFragment extends Fragment {
         binding = FragmentSlideshowBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textSlideshow;
-        slideshowViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+        //final TextView textView = binding.textSlideshow;
+        //slideshowViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
 
         final Button btnActualizar = binding.btnActualizar;
         btnActualizar.setOnClickListener(new View.OnClickListener() {
-            final EditText edtcodigo = binding.edtCodigo;
+            final EditText edtcodigo2 = binding.edtCodigo;
+            final EditText edtcodigo = binding.edtNombre;
             @Override
             public void onClick(View view) {
                 find(edtcodigo.getText().toString());
-                textView.setVisibility(View.GONE);
+                find2(edtcodigo2.getText().toString());
+                edtcodigo.getText().clear();
+                edtcodigo2.getText().clear();
             }
         });
 
@@ -54,12 +57,6 @@ public class SlideshowFragment extends Fragment {
 
     private void find(String codigo){
         final TextView texto1 = binding.txtInfo1;
-        final TextView texto2 = binding.txtInfo2;
-        final TextView texto3 = binding.txtInfo3;
-        final TextView texto4 = binding.txtInfo4;
-        final TextView texto5 = binding.txtInfo5;
-        final TextView texto6 = binding.txtInfo6;
-        final TextView texto7 = binding.txtInfo7;
         final HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
         logging.setLevel(HttpLoggingInterceptor.Level.BODY);
         //Peticiones
@@ -79,10 +76,47 @@ public class SlideshowFragment extends Fragment {
                     if (response.isSuccessful()){
                         pokemones elementos = response.body();
                         texto1.setText(elementos.getName());
-                        texto2.setText(elementos.getUrl());
+
 
                     }else{
-                        Toast.makeText(getActivity(), "No se encontro el ID: "+ codigo, Toast.LENGTH_LONG).show();
+                        Toast.makeText(getActivity(), "No se encontro el ID del pokemon: "+ codigo, Toast.LENGTH_LONG).show();
+                    }
+                }catch (Exception ex){
+
+                }
+            }
+
+            @Override
+            public void onFailure(Call<pokemones> call, Throwable t) {
+
+            }
+        });
+    }
+
+    private void find2(String codigo2){
+        final TextView texto2 = binding.txtInfo2;
+        final HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
+        logging.setLevel(HttpLoggingInterceptor.Level.BODY);
+        //Peticiones
+        final OkHttpClient.Builder httpClient = new OkHttpClient.Builder();
+        httpClient.addInterceptor(logging);
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("https://pokeapi.co/api/v2/berry-flavor/")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+
+        pokemonesAPI personajesAPI = retrofit.create(pokemonesAPI.class);
+        Call<pokemones> call = personajesAPI.find(codigo2);
+        call.enqueue(new Callback<pokemones>() {
+            @Override
+            public void onResponse(Call<pokemones> call, Response<pokemones> response) {
+                try {
+                    if (response.isSuccessful()){
+                        pokemones elementos = response.body();
+                        texto2.setText(elementos.getName());
+
+                    }else{
+                        Toast.makeText(getActivity(), "No se encontro el ID de la baya: "+ codigo2, Toast.LENGTH_LONG).show();
                     }
                 }catch (Exception ex){
 

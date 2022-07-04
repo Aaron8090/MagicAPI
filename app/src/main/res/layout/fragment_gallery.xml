@@ -63,7 +63,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:autofillHints="no"
-                android:hint="Apellido_Paterno"
+                android:hint="Apellido paterno"
                 android:inputType="text"
                 tools:ignore="SpeakableTextPresentCheck" />
 
@@ -81,7 +81,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:autofillHints="no"
-                android:hint="Apellido_Materno"
+                android:hint="Apellido materno"
                 android:inputType="text"
                 tools:ignore="SpeakableTextPresentCheck" />
 
@@ -118,7 +118,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:autofillHints="no"
-                android:hint="Contrasena"
+                android:hint="Contraseña"
                 android:inputType="textPassword"
                 tools:ignore="SpeakableTextPresentCheck" />
 
@@ -137,7 +137,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:autofillHints="no"
-                android:hint="Confirmacion_de_contrasena"
+                android:hint="Confirmacion de contraseña"
                 android:inputType="textPassword"
                 tools:ignore="SpeakableTextPresentCheck" />
 
@@ -156,7 +156,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:autofillHints="no"
-                android:hint="Fecha_nacimiento_anio-mes-dia"
+                android:hint="Fecha de nacimiento AÑO-MES-DIA"
                 android:inputType="date"
                 tools:ignore="SpeakableTextPresentCheck" />
 

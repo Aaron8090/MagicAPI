@@ -4,11 +4,13 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/roble/AndroidStudioProjects/RegistroYLogin/app/src/main/res/drawable/ic_menu_gallery.xml" value="0.1785" />
+        <entry key="..\:/Users/roble/AndroidStudioProjects/RegistroYLogin/app/src/main/res/layout/activity_busqueda_pokemones.xml" value="0.1" />
         <entry key="..\:/Users/roble/AndroidStudioProjects/RegistroYLogin/app/src/main/res/layout/activity_main.xml" value="0.1641337386018237" />
+        <entry key="..\:/Users/roble/AndroidStudioProjects/RegistroYLogin/app/src/main/res/layout/activity_pokemones.xml" value="0.3291015625" />
         <entry key="..\:/Users/roble/AndroidStudioProjects/RegistroYLogin/app/src/main/res/layout/content_main.xml" value="0.1641337386018237" />
         <entry key="..\:/Users/roble/AndroidStudioProjects/RegistroYLogin/app/src/main/res/layout/fragment_gallery.xml" value="0.1641337386018237" />
         <entry key="..\:/Users/roble/AndroidStudioProjects/RegistroYLogin/app/src/main/res/layout/fragment_home.xml" value="0.1641337386018237" />
-        <entry key="..\:/Users/roble/AndroidStudioProjects/RegistroYLogin/app/src/main/res/layout/fragment_slideshow.xml" value="0.1641337386018237" />
+        <entry key="..\:/Users/roble/AndroidStudioProjects/RegistroYLogin/app/src/main/res/layout/fragment_slideshow.xml" value="0.25" />
       </map>
     </option>
   </component>
